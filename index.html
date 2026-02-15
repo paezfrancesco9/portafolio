@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Francesco Paez | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BOTÓN TEMA -->
+    <button id="theme-toggle">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- TARJETA PRINCIPAL -->
+    <div class="card">
+
+        <div class="card-header">
+            <img src="imagen portafolio.jpeg" alt="Francesco Paez">
+        </div>
+
+        <div class="card-body">
+            <h2>Francesco Paez</h2>
+            <p>Desarrollador Web</p>
+
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/color/48/whatsapp--v1.png"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/facebook--v1.png"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/instagram-new--v1.png"></a>
+                <a href="https://www.linkedin.com/in/francesco-pa%C3%A9z-377716361/" target="_blank">
+                    <img src="https://img.icons8.com/color/48/linkedin.png">
+                </a>
+                <a href="#"><img src="https://img.icons8.com/color/48/resume.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio">
+        <h2>Mis Proyectos</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <img src="CYCA.png" alt="Página Web CYCA">
+                <h3>C Y C A</h3>
+
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <p>Sitio web moderno con animaciones dinámicas y efectos interactivos desarrollados en JavaScript.</p>
+                <a href="#">Ver Proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <img src="EST. JURID. RUIZ DIAZ LABRANO.png" alt="VoltFact">
+                <h3>Estudio Juridico RDL</h3>
+
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <p>Sitio web profesional con diseño sobrio y estructura enfocada en transmitir confianza y trayectoria.</p>
+                <a href="#">Ver Proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <img src="SOLUCAR.png" alt="DigitalStore">
+                <h3>SOLUCAR S.R.L</h3>
+
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <p>Sitio web comercial moderno orientado a la venta de repuestos originales Koreanos.</p>
+                <a href="#">Ver Proyecto</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+        const themeIcon = document.getElementById("theme-icon");
+
+        if (localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light-mode");
+            themeIcon.textContent = "☀️";
+        }
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            if (document.body.classList.contains("light-mode")) {
+                themeIcon.textContent = "☀️";
+                localStorage.setItem("theme", "light");
+            } else {
+                themeIcon.textContent = "🌙";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
+
+</body>
+</html>
