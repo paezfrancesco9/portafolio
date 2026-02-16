@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f172a, #111827);
     color: white;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* BOTÓN TEMA */
@@ -20,7 +22,8 @@ body {
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    font-size: 18px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 #theme-toggle:hover {
@@ -70,8 +73,21 @@ body {
 }
 
 /* ICONOS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    border: none;
+}
+
 .social-icons img {
     width: 28px;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -121,9 +137,14 @@ body {
 
 .project-card p {
     color: #9ca3af;
+    margin-top: 10px;
 }
 
 /* TECH TAGS */
+.tech-tags {
+    margin-top: 10px;
+}
+
 .tech-tags span {
     display: inline-block;
     background: rgba(59,130,246,0.15);
@@ -134,7 +155,7 @@ body {
     margin: 4px;
 }
 
-/* BOTÓN */
+/* BOTÓN PROYECTO */
 .project-card a {
     display: inline-block;
     margin-top: 22px;
@@ -160,4 +181,9 @@ body {
 .light-mode .card,
 .light-mode .project-card {
     background: white;
+}
+
+.light-mode .card-body p,
+.light-mode .project-card p {
+    color: #4b5563;
 }
